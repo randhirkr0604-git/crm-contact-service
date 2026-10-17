@@ -1,0 +1,48 @@
+-- table creation query to be used for leads table.
+
+CREATE TABLE `leads` (
+    `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `account_id` SMALLINT UNSIGNED NOT NULL,
+    `organisation_id` INT UNSIGNED DEFAULT NULL,
+    `team_id` INT UNSIGNED DEFAULT NULL,
+    `activity` VARCHAR(70) DEFAULT NULL,
+    `status` VARCHAR(60) DEFAULT NULL,
+    `gender` ENUM('male', 'female') DEFAULT NULL,
+    `firstname` VARCHAR(120) DEFAULT NULL,
+    `lastname` VARCHAR(120) DEFAULT NULL,
+    `postcode` VARCHAR(6) DEFAULT NULL,
+    `housenumber` VARCHAR(5) DEFAULT NULL,
+    `suffix` VARCHAR(6) DEFAULT NULL,
+    `streetname` VARCHAR(80) DEFAULT NULL,
+    `city` VARCHAR(80) DEFAULT NULL,
+    `country` VARCHAR(2) DEFAULT 'NL',
+    `birthdate` DATE DEFAULT NULL,
+    `email` VARCHAR(120) DEFAULT NULL,
+    `phone` VARCHAR(15) DEFAULT NULL,
+    `business` ENUM('0', '1') NOT NULL DEFAULT '0',
+    `company_name` VARCHAR(120) DEFAULT NULL,
+    `contact_person` VARCHAR(120) DEFAULT NULL,
+    `data` TEXT DEFAULT NULL,
+    `attachments` TEXT DEFAULT NULL,
+    `history` TEXT DEFAULT NULL,
+    `created_by` INT UNSIGNED DEFAULT NULL,
+    `created_ip` VARCHAR(45) DEFAULT NULL,
+    `planned_user_id` INT UNSIGNED DEFAULT NULL,
+    `planned_date` DATE DEFAULT NULL,
+    `planned_by` INT UNSIGNED DEFAULT NULL,
+    `planned_at` TIMESTAMP NULL DEFAULT NULL,
+    `planned_from` TIMESTAMP NULL DEFAULT NULL,
+    `planned_to` TIMESTAMP NULL DEFAULT NULL,
+    `planned_duration` SMALLINT DEFAULT NULL,
+    `completed_at` TIMESTAMP NULL DEFAULT NULL,
+    `completed_team_id` INT UNSIGNED DEFAULT NULL,
+    `completed_by` INT UNSIGNED DEFAULT NULL,
+    `started_at` TIMESTAMP NULL DEFAULT NULL,
+    `created_at` TIMESTAMP NULL DEFAULT NULL,
+    `updated_at` TIMESTAMP NULL DEFAULT NULL,
+    `deleted_at` TIMESTAMP NULL DEFAULT NULL,
+
+    PRIMARY KEY (`id`)
+) ENGINE=InnoDB
+  DEFAULT CHARSET=utf8mb3
+  COLLATE=utf8mb3_unicode_ci;
